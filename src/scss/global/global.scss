@@ -1,0 +1,54 @@
+* {
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    font-smooth: always;
+}
+
+body {
+    padding-top: 80px;
+}
+
+/*body {
+    overflow-x: hidden;
+
+    &:after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100dvh;
+        display: block;
+        background-color: #0000007F;
+        opacity: 0;
+        pointer-events: none;
+        z-index: -1;
+        transition: opacity .6s ease-in-out, z-index 0s linear .6s;
+    }
+
+    &.lock {
+        overflow: hidden;
+        pointer-events: none;
+
+        &:after {
+            opacity: 1;
+            z-index: 997;
+            transition: opacity .6s ease-in-out, z-index 0s;
+        }
+
+        &-removing {
+            &:after {
+                opacity: 0;
+                z-index: 997;
+                pointer-events: none;
+                transition: opacity .6s ease-in-out;
+            }
+        }
+    }
+}*/
+
+main {
+    flex: 1;
+}

@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+    @include('partials/global/head.html')
+
+    <link rel="preload" as="image" aria-hidden="true" href="./img/sections/main/section-hero/bg-hero.webp">
+</head>
+<title>KIM - Wellness Wholistic In You</title>
+<body class="flex flex--column">
+<!--@include('partials/global/sprite.html')
+-->
+@include('partials/global/header.html')
+
+<main>
+    @include('partials/main/sections/section-hero.html')
+    @include('partials/main/sections/section-about.html')
+    @include('partials/main/sections/section-store.html')
+    @include('partials/main/sections/section-encore.html')
+    @include('partials/main/sections/section-consultation.html')
+</main>
+
+<!--@include('partials/global/footer.html')-->
+
+<script defer src="./js/jquery.js"></script>
+<script defer src="./js/main.js?v=1.0"></script>
+<!--<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://vibe-fit.net/",
+                "url": "https://vibe-fit.net/",
+                "name": "VibeFit",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://vibe-fit.net/?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://vibe-fit.net/",
+                "url": "https://vibe-fit.net/",
+                "name": "VibeFit — персональні фітнес-плани через Telegram",
+                "isPartOf": {
+                    "@id": "https://vibe-fit.net/"
+                },
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://vibe-fit.net/img/og/og_vibefit_1200_675.png",
+                    "width": 1200,
+                    "height": 675
+                }
+            },
+            {
+                "@type": "WebApplication",
+                "name": "VibeFit",
+                "url": "https://vibe-fit.net/",
+                "description": "VibeFit — фітнес-чат-бот, який підбирає тренування та раціон у Telegram.",
+                "applicationCategory": "HealthApplication",
+                "operatingSystem": "iOS, Android, Web",
+                "sameAs": [
+                    "https://t.me/vibefit_bot"
+                ]
+            },
+            {
+                "@type": "Product",
+                "name": "VibeFit — фітнес-бот",
+                "image": "https://vibe-fit.net/img/og/og_vibefit_1200_675.png",
+                "description": "Фітнес-бот із планами тренувань і раціоном у Telegram",
+                "brand": {
+                    "@type": "Brand",
+                    "name": "VibeFit"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "5",
+                    "reviewCount": "350"
+                },
+                "review": [
+                    {
+                        "@type": "Review",
+                        "author": {
+                            "@type": "Person",
+                            "name": "Олена"
+                        },
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": "5",
+                            "bestRating": "5"
+                        },
+                        "reviewBody": "Супер бот! Дуже зручно та ефективно!"
+                    }
+                ],
+                "offers": [
+                    {
+                        "@type": "Offer",
+                        "name": "Пробний",
+                        "url": "https://vibe-fit.net/#pricing",
+                        "description": "Познайомся з VibeFit легко!",
+                        "priceCurrency": "UAH",
+                        "price": "1999.00",
+                        "priceValidUntil": "2026-01-01",
+                        "availability": "https://schema.org/InStock",
+                        "itemCondition": "https://schema.org/NewCondition",
+                        "shippingDetails": {
+                            "@type": "OfferShippingDetails",
+                            "shippingRate": {
+                                "@type": "MonetaryAmount",
+                                "value": "0",
+                                "currency": "UAH"
+                            },
+                            "shippingDestination": {
+                                "@type": "DefinedRegion",
+                                "addressCountry": "UA"
+                            }
+                        },
+                        "hasMerchantReturnPolicy": {
+                            "@type": "MerchantReturnPolicy",
+                            "applicableCountry": "UA",
+                            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                            "merchantReturnDays": 14
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "Базовий",
+                        "url": "https://vibe-fit.net/#pricing",
+                        "description": "Твій персональний фітнес-помічник.",
+                        "priceCurrency": "UAH",
+                        "price": "2999.00",
+                        "priceValidUntil": "2026-01-01",
+                        "availability": "https://schema.org/InStock",
+                        "itemCondition": "https://schema.org/NewCondition",
+                        "shippingDetails": {
+                            "@type": "OfferShippingDetails",
+                            "shippingRate": {
+                                "@type": "MonetaryAmount",
+                                "value": "0",
+                                "currency": "UAH"
+                            },
+                            "shippingDestination": {
+                                "@type": "DefinedRegion",
+                                "addressCountry": "UA"
+                            }
+                        },
+                        "hasMerchantReturnPolicy": {
+                            "@type": "MerchantReturnPolicy",
+                            "applicableCountry": "UA",
+                            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                            "merchantReturnDays": 14
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "PRO",
+                        "url": "https://vibe-fit.net/#pricing",
+                        "description": "Максимум підтримки + тренажер.",
+                        "priceCurrency": "UAH",
+                        "price": "3999.00",
+                        "priceValidUntil": "2026-01-01",
+                        "availability": "https://schema.org/InStock",
+                        "itemCondition": "https://schema.org/NewCondition",
+                        "shippingDetails": {
+                            "@type": "OfferShippingDetails",
+                            "shippingRate": {
+                                "@type": "MonetaryAmount",
+                                "value": "0",
+                                "currency": "UAH"
+                            },
+                            "shippingDestination": {
+                                "@type": "DefinedRegion",
+                                "addressCountry": "UA"
+                            }
+                        },
+                        "hasMerchantReturnPolicy": {
+                            "@type": "MerchantReturnPolicy",
+                            "applicableCountry": "UA",
+                            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                            "merchantReturnDays": 14
+                        }
+                    }
+                ]
+            },
+            {
+                "@type": "ImageObject",
+                "contentUrl": "https://vibe-fit.net/img/og/og_vibefit_1200_675.png",
+                "creator": {
+                    "@type": "Organization",
+                    "name": "VibeFit"
+                },
+                "representativeOfPage": true,
+                "copyrightNotice": "© 2025 VibeFit",
+                "acquireLicensePage": "https://vibe-fit.net/license",
+                "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+                "creditText": "Зображення належить VibeFit"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "VibeFit Головна",
+                        "item": "https://vibe-fit.net/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Як це працює?",
+                        "item": "https://vibe-fit.net/#sectionInfo"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "FAQ",
+                        "item": "https://vibe-fit.net/#sectionFAQ"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Тарифи",
+                        "item": "https://vibe-fit.net/#sectionPrice"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Це безпечно? Що з оплатою?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Абсолютно. Платформа використовує захищені способи оплати, а всі персональні дані — конфіденційні. Є безкоштовний тестовий період — плати лише тоді, коли точно хочеш продовжити."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "А що з харчуванням? Дієти?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Жодних жорстких дієт. Ти просто відповідаєш на кілька питань, і бот складає збалансоване меню під твої вподобання, ритм життя та бюджет."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Як працює оренда тренажерів?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Оренда тренажера працює дуже просто: ти оформлюєш підписку в чат-боті за 1 хвилину, вносиш завдаток $100 — ця сума повертається після повернення тренажера. Ми надсилаємо макротренажер прямо тобі додому, і він залишається у тебе на весь період підписки. Після завершення користування ти можеш або повернути тренажер і отримати назад завдаток, або продовжити підписку. Увесь супровід — у чат-боті: індивідуальна програма харчування, онлайн-тренування та підтримка 24/7."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Скільки часу займають тренування?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "VibeFit враховує твій графік та енергію. Є плани на 10 хв, на 30 — ти обираєш."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Що, якщо я зіб’юсь із графіку?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Нічого страшного! Бот гнучкий — він підлаштовується під твій ритм. Просто повідом йому, що була перервa, і він адаптує план. Без провини, без “починай заново”."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Це підходить для будь-якого віку?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Бот враховує вік, рівень підготовки та цілі — тому це безпечно й ефективно на будь-якому етапі життя."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+</script>-->
+</body>
+</html>

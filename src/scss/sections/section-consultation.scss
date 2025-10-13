@@ -1,0 +1,14 @@
+.consultation {
+    background-image: url('../img/sections/main/section-consultation/bg-line.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center bottom;
+
+    &__container {
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .11);
+    }
+
+    &__block {
+        height: 120px;
+    }
+}

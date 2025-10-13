@@ -1,0 +1,34 @@
+.hero {
+    background-image: url('../img/sections/main/section-hero/bg-hero.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 666px;
+
+    &__client {
+        height: 28px;
+        width: 28px;
+        border: 1.6px solid var(--color--white);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &:nth-of-type(1) {
+            background-image: url('../img/sections/main/section-hero/image-client-1.webp');
+        }
+
+        &:nth-of-type(2) {
+            background-image: url('../img/sections/main/section-hero/image-client-2.webp');
+            left: -8.2px;
+        }
+
+        &:nth-of-type(3) {
+            background-image: url('../img/sections/main/section-hero/image-client-3.webp');
+            left: -16.4px;
+        }
+
+        &-wrapper {
+            max-width: 68px;
+        }
+    }
+}

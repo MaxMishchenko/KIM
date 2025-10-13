@@ -1,0 +1,3 @@
+$('#burger-menu').on('click', function() {
+    $(this).toggleClass('close');
+});

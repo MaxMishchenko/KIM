@@ -1,0 +1,19 @@
+@import 'global/nullstyle';
+@import 'global/fonts';
+@import 'global/variables';
+@import 'global/classes';
+@import 'global/colors';
+@import 'global/global';
+@import 'global/animations';
+
+// BASE
+@import 'base/header';
+
+// SECTIONS
+@import 'sections/section-hero';
+@import 'sections/section-about';
+@import 'sections/section-store';
+@import 'sections/section-encore';
+@import 'sections/section-consultation';
+
+// STATIC
