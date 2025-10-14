@@ -58,6 +58,10 @@
             padding-left: 16px;
         }
 
+        &--24 {
+            padding-left: 24px;
+        }
+
         &--32 {
             padding-left: 32px;
         }
@@ -76,6 +80,10 @@
             padding-right: 16px;
         }
 
+        &--24 {
+            padding-right: 24px;
+        }
+
         &--32 {
             padding-right: 32px;
         }
@@ -92,6 +100,10 @@
 
         &--16 {
             padding-top: 16px;
+        }
+
+        &--24 {
+            padding-top: 24px;
         }
 
         &--32 {
@@ -116,6 +128,10 @@
             padding-bottom: 16px;
         }
 
+        &--24 {
+            padding-bottom: 24px;
+        }
+
         &--32 {
             padding-bottom: 32px;
         }
@@ -134,6 +150,12 @@
     &--auto {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    &b {
+        &--16 {
+            margin-bottom: 16px;
+        }
     }
 }
 
@@ -161,6 +183,10 @@
     &--muted-blue {
         color: var(--color--muted-blue);
     }
+
+    &--decor-blue {
+        color: var(--color--decor-blue);
+    }
 }
 
 .bg {
@@ -186,6 +212,14 @@
 
     &--btn-blue {
         background-color: var(--color--primary-btn-blue);
+    }
+
+    &--super-light-blue {
+        background-color: var(--color--super-light-blue);
+    }
+
+    &--decor-blue {
+        background-color: var(--color--decor-blue);
     }
 }
 
@@ -290,4 +324,17 @@
     &--secondary {
         width: 169px;
     }
+
+    &--transparent {
+        background-color: transparent;
+    }
+}
+
+.divider {
+    height: 1px;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
 }

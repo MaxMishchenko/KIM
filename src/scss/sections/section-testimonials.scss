@@ -1,0 +1,13 @@
+.testimonials {
+    &__text {
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 14;
+        overflow: hidden;
+    }
+
+    &__wrapper {
+        overflow-x: hidden;
+    }
+}

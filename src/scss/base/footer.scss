@@ -1,0 +1,13 @@
+.footer {
+    &__form {
+        &-field {
+            &::placeholder {
+                font-family: 'Inter';
+                @include font(16);
+                font-weight: 400;
+                color: var(--color--text-gray);
+                line-height: 150%;
+            }
+        }
+    }
+}
