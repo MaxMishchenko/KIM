@@ -1,0 +1,44 @@
+.popup {
+    width: 100%;
+    max-width: calc(100% - 64px);
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    &__overlay {
+        inset: 0;
+        background-color: rgba(0, 0, 0, .51);
+        z-index: 1000;
+        overflow-y: auto;
+
+        &.active {
+            display: flex;
+        }
+    }
+
+    &__img {
+        background-image: url('../img/popup/main/image-popup.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        min-height: 126px;
+    }
+
+    &__form {
+        &-field {
+            &::placeholder {
+                font-family: 'Inter';
+                @include font(16);
+                font-weight: 400;
+                color: var(--color--text-gray);
+                line-height: 150%;
+            }
+        }
+    }
+
+    &__close {
+        top: 8px;
+        right: 8px;
+    }
+}

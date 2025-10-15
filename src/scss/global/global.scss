@@ -8,6 +8,10 @@
 
 body {
     padding-top: 80px;
+
+    &.popup-open {
+        overflow: hidden;
+    }
 }
 
 /*body {

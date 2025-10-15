@@ -137,3 +137,49 @@ const swiper = new Swiper('.swiper', {
         nextSlideMessage: 'Next slide'
     }
 });
+
+// Main popup //
+$(function () {
+    const popup = $('#popup');
+    const closeBtn = popup.find('.popup__close');
+    const delayBeforeFirstPopup = 10 * 1000; // 10 секунд
+    const intervalMinutes = 15 * 60 * 1000;  // 15 хвилин
+    const storageKey = 'popupClosedAt';
+
+    function showPopup() {
+        $('body').addClass('popup-open');
+        popup.addClass('active');
+        closeBtn.focus();
+    }
+
+    function hidePopup() {
+        $('body').removeClass('popup-open');
+        popup.removeClass('active');
+        localStorage.setItem(storageKey, Date.now());
+    }
+
+    function shouldShowPopup() {
+        const lastClosed = localStorage.getItem(storageKey);
+        if (!lastClosed) return true;
+        const diff = Date.now() - Number(lastClosed);
+        return diff >= intervalMinutes;
+    }
+
+    closeBtn.on('click', hidePopup);
+
+    if (shouldShowPopup()) {
+        const lastClosed = localStorage.getItem(storageKey);
+        if (lastClosed) {
+            showPopup();
+        } else {
+            setTimeout(showPopup, delayBeforeFirstPopup);
+        }
+    }
+
+    setInterval(() => {
+        const isPopupVisible = popup.hasClass('active');
+        if (!isPopupVisible && shouldShowPopup()) {
+            showPopup();
+        }
+    }, 10 * 1000); // 10 секунд
+});
