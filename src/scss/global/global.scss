@@ -10,6 +10,10 @@ body {
     &.lock {
         overflow: hidden;
         pointer-events: none;
+        user-select: none;
+        user-focus-key: unset;
+        user-focus-pointer: unset;
+        user-focus: unset;
     }
 }
 

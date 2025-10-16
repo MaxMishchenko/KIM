@@ -4,6 +4,7 @@ $burger.on('click', function () {
     $(this).toggleClass('close');
     $('#mobileMenu').toggleClass('open');
     $('body').toggleClass('lock');
+    $('.header').toggleClass('open');
 
     if ($('#mobileMenuDropdownChevron').hasClass('open')) {
         $('#mobileMenuDropdownBtn').trigger('click');
@@ -148,8 +149,8 @@ const swiper = new Swiper('.swiper', {
 $(function () {
     const popup = $('#popup');
     const closeBtn = popup.find('.popup__close');
-    const delayBeforeFirstPopup = 10 * 1000; // 10 секунд
-    const intervalMinutes = 15 * 60 * 1000;  // 15 хвилин
+    const delayBeforeFirstPopup = 10 * 1000; // 10 секунд перед першим показом
+    const intervalMinutes = 15 * 60 * 1000;  // 15 хвилин між показами
     const storageKey = 'popupClosedAt';
 
     function showPopup() {
@@ -177,28 +178,33 @@ $(function () {
 
     function tryShowPopup() {
         if ($('body').hasClass('lock')) {
-            setTimeout(tryShowPopup, 10 * 1000); // 10 секунд
+            setTimeout(tryShowPopup, 10 * 1000);
             return;
         }
-
         if (shouldShowPopup()) showPopup();
     }
 
-    if (shouldShowPopup()) {
-        const lastClosed = localStorage.getItem(storageKey);
-        if (lastClosed) {
-            tryShowPopup();
-        } else {
+    const lastClosed = localStorage.getItem(storageKey);
+
+    if (!lastClosed) {
+        setTimeout(tryShowPopup, delayBeforeFirstPopup);
+    } else {
+        const diff = Date.now() - Number(lastClosed);
+
+        if (diff >= intervalMinutes) {
             setTimeout(tryShowPopup, delayBeforeFirstPopup);
+        } else {
+            const timeLeft = intervalMinutes - diff;
+            setTimeout(tryShowPopup, timeLeft + delayBeforeFirstPopup);
         }
     }
 
     setInterval(() => {
         const isPopupVisible = popup.hasClass('active');
         if (!isPopupVisible && shouldShowPopup() && !$('body').hasClass('lock')) {
-            showPopup();
+            setTimeout(showPopup, delayBeforeFirstPopup);
         }
-    }, 10 * 1000); // 10 секунд
+    }, 10 * 1000);
 });
 
 // Mobile menu dropdown list //
