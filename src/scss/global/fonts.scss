@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Inter';
     font-display: swap;
-    src: url(../fonts/InterRegular.woff2) format('woff2'), url(../fonts/InterRegular.woff) format('woff');
+    src: url(../fonts/InterRegular.woff2) format('woff2'), url(../fonts/InterRegular.woff) format('woff'), url(../fonts/InterRegular.ttf) format('truetype');
     font-weight: 400;
     font-style: normal;
 }
@@ -9,7 +9,7 @@
 @font-face {
     font-family: 'Inter';
     font-display: swap;
-    src: url(../fonts/InterMedium.woff2) format('woff2'), url(../fonts/InterMedium.woff) format('woff');
+    src: url(../fonts/InterMedium.woff2) format('woff2'), url(../fonts/InterMedium.woff) format('woff'), url(../fonts/InterMedium.ttf) format('truetype');
     font-weight: 500;
     font-style: normal;
 }
@@ -17,7 +17,7 @@
 @font-face {
     font-family: 'Sansation';
     font-display: swap;
-    src: url(../fonts/SansationItalic.woff2) format('woff2'), url(../fonts/SansationItalic.woff) format('woff');
+    src: url(../fonts/SansationItalic.woff2) format('woff2'), url(../fonts/SansationItalic.woff) format('woff'), url(../fonts/SansationItalic.ttf) format('truetype');
     font-weight: 400;
     font-style: italic;
 }
@@ -25,7 +25,7 @@
 @font-face {
     font-family: 'Sansation';
     font-display: swap;
-    src: url(../fonts/SansationBoldItalic.woff2) format('woff2'), url(../fonts/SansationBoldItalic.woff) format('woff');
+    src: url(../fonts/SansationBoldItalic.woff2) format('woff2'), url(../fonts/SansationBoldItalic.woff) format('woff'), url(../fonts/SansationBoldItalic.ttf) format('truetype');
     font-weight: 700;
     font-style: italic;
 }
