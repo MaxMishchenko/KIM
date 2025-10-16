@@ -2,6 +2,12 @@
 const $burger = $('#burger-menu');
 $burger.on('click', function () {
     $(this).toggleClass('close');
+    $('#mobileMenu').toggleClass('open');
+    $('body').toggleClass('lock');
+
+    if ($('#mobileMenuDropdownChevron').hasClass('open')) {
+        $('#mobileMenuDropdownBtn').trigger('click');
+    }
 });
 
 // Button "More details" //
@@ -147,13 +153,15 @@ $(function () {
     const storageKey = 'popupClosedAt';
 
     function showPopup() {
-        $('body').addClass('popup-open');
+        if ($('body').hasClass('lock')) return;
+
+        $('body').addClass('lock');
         popup.addClass('active');
         closeBtn.focus();
     }
 
     function hidePopup() {
-        $('body').removeClass('popup-open');
+        $('body').removeClass('lock');
         popup.removeClass('active');
         localStorage.setItem(storageKey, Date.now());
     }
@@ -167,19 +175,34 @@ $(function () {
 
     closeBtn.on('click', hidePopup);
 
+    function tryShowPopup() {
+        if ($('body').hasClass('lock')) {
+            setTimeout(tryShowPopup, 10 * 1000); // 10 секунд
+            return;
+        }
+
+        if (shouldShowPopup()) showPopup();
+    }
+
     if (shouldShowPopup()) {
         const lastClosed = localStorage.getItem(storageKey);
         if (lastClosed) {
-            showPopup();
+            tryShowPopup();
         } else {
-            setTimeout(showPopup, delayBeforeFirstPopup);
+            setTimeout(tryShowPopup, delayBeforeFirstPopup);
         }
     }
 
     setInterval(() => {
         const isPopupVisible = popup.hasClass('active');
-        if (!isPopupVisible && shouldShowPopup()) {
+        if (!isPopupVisible && shouldShowPopup() && !$('body').hasClass('lock')) {
             showPopup();
         }
     }, 10 * 1000); // 10 секунд
+});
+
+// Mobile menu dropdown list //
+$('#mobileMenuDropdownBtn').click(function () {
+    $('#mobileMenuDropdownChevron').toggleClass('open');
+    $('#mobileMenuDropdownList').slideToggle();
 });
