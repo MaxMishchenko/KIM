@@ -1,3 +1,38 @@
 .insights {
+    @media (min-width: 768px) {
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 200.45px;
+            height: 100%;
+            top: 0;
+            z-index: 1;
+        }
 
+        &:before {
+            background-image: url('../img/sections/main/section-insights/bg-left.svg');
+            left: 0;
+        }
+
+        &:after {
+            background-image: url('../img/sections/main/section-insights/bg-right.svg');
+            right: 0;
+        }
+    }
+
+    &__container {
+        z-index: 2;
+    }
+
+    &__btn {
+        max-width: 256px;
+    }
+
+    &__text {
+        max-width: 691px;
+    }
 }

@@ -1,10 +1,29 @@
 .popup {
     width: 100%;
-    max-width: calc(100% - 64px);
+    width: calc(100% - 64px);
     position: relative;
     max-height: 90vh;
     overflow-y: auto;
     pointer-events: auto;
+    max-width: 695px;
+
+    @media (min-width: 768px) {
+        padding: 32px;
+        gap: 32px;
+
+        &__title {
+            @include font(48);
+        }
+
+        &__text {
+            @include font(18);
+        }
+
+        &__icon {
+            width: 48px;
+            height: 48px;
+        }
+    }
 
     &__overlay {
         inset: 0;
@@ -18,12 +37,9 @@
     }
 
     &__img {
-        background-image: url('../img/popup/main/image-popup.webp');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        object-fit: cover;
         width: 100%;
-        min-height: 126px;
+        height: auto;
     }
 
     &__form {
@@ -34,6 +50,26 @@
                 font-weight: 400;
                 color: var(--color--text-gray);
                 line-height: 150%;
+
+                @media (min-width: 768px) {
+                    @include font(18);
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+
+            &-field {
+                height: 59px;
+                width: 100%;
+                @include font(18);
+            }
+
+            &-btn {
+                height: 59px;
+                @include font(18);
+                flex-shrink: 0;
             }
         }
     }
@@ -41,5 +77,10 @@
     &__close {
         top: 8px;
         right: 8px;
+
+        @media (min-width: 768px) {
+            right: 16px;
+            top: 16px;
+        }
     }
 }

@@ -4,4 +4,14 @@
         width: 100%;
         height: auto;
     }
+
+    @media (min-width: 768px) {
+        &__posts {
+            flex-direction: row;
+        }
+
+        &__post {
+            flex-basis: calc(100% / 3);
+        }
+    }
 }

@@ -4,11 +4,40 @@
     background-size: auto;
     background-position: center bottom;
 
+    @media (min-width: 768px) {
+        background-position: left;
+    }
+
     &__container {
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .11);
+
+        @media (min-width: 768px) {
+            padding: 32px;
+        }
     }
 
     &__block {
         height: 120px;
+
+        @media (min-width: 768px) {
+            flex-basis: calc(100% / 3);
+            height: 139px;
+        }
+    }
+
+    &__btn {
+        max-width: 256px;
+
+        @media (min-width: 768px) {
+            &-container {
+                flex-direction: row;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        &__wrapper {
+            flex-direction: row;
+        }
     }
 }

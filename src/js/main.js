@@ -142,6 +142,13 @@ const swiper = new Swiper('.swiper', {
     a11y: {
         prevSlideMessage: 'Previous slide',
         nextSlideMessage: 'Next slide'
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 32,
+            centeredSlides: false
+        }
     }
 });
 
@@ -149,7 +156,7 @@ const swiper = new Swiper('.swiper', {
 $(function () {
     const popup = $('#popup');
     const closeBtn = popup.find('.popup__close');
-    const delayBeforeFirstPopup = 10 * 1000; // 10 секунд перед першим показом
+    const delayBeforeFirstPopup = 1 * 1000; // 10 секунд перед першим показом
     const intervalMinutes = 15 * 60 * 1000;  // 15 хвилин між показами
     const storageKey = 'popupClosedAt';
 

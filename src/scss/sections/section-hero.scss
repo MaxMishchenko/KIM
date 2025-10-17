@@ -3,7 +3,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    min-height: 666px;
+    height: 666px;
+
+    @media (min-width: 768px) {
+        height: 810px;
+        justify-content: space-between;
+    }
+
+    &__clients {
+        max-width: fit-content;
+    }
 
     &__client {
         height: 28px;
@@ -30,5 +39,13 @@
         &-wrapper {
             max-width: 68px;
         }
+    }
+
+    &__text {
+        max-width: 462px;
+    }
+
+    &__btn {
+        max-width: 256px;
     }
 }

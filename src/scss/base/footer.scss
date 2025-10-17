@@ -1,6 +1,13 @@
 .footer {
     &__form {
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+
         &-field {
+            max-width: 330px;
+            width: 100%;
+
             &::placeholder {
                 font-family: 'Inter';
                 @include font(16);
@@ -9,5 +16,9 @@
                 line-height: 150%;
             }
         }
+    }
+
+    &__text {
+        max-width: 665px;
     }
 }

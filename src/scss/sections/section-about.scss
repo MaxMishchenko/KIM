@@ -1,33 +1,10 @@
 .about {
-    &__container {
-        margin-bottom: 12px;
-        max-width: 256px;
-        overflow: visible;
-
-        &:before,
-        &:after {
-            content: '';
-            display: block;
-            width: 140px;
-            height: 171.55px;
-            background-color: var(--color--blue-hover);
-            position: absolute;
-            z-index: -1;
-        }
-
-        &:before {
-            left: -12px;
-            top: -12px;
-        }
-
-        &:after {
-            right: -12px;
-            bottom: -12px;
-        }
+    &__img {
+        width: calc(100vw - 64px);
+        height: auto;
     }
 
-    &__img {
-        object-fit: cover;
-        object-position: top;
+    @media (min-width: 768px) {
+        gap: 32px;
     }
 }

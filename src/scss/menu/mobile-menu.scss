@@ -4,15 +4,17 @@
     right: 0;
     height: calc(100dvh + 80px);
     transform: translateY(calc(100dvh + 80px));
-    transition: transform .4s;
+    transition: transform .4s ease, opacity .2s ease;
     z-index: 998;
     pointer-events: none;
+    opacity: 0;
 
     &.open {
         transform: translateY(0);
         pointer-events: auto;
         overflow: auto;
         height: calc(100dvh - 80px);
+        opacity: 1;
     }
 
     &__list {

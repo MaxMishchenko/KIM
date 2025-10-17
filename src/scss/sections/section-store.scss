@@ -3,4 +3,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @media (min-width: 768px) {
+        background-size: inherit;
+    }
 }
