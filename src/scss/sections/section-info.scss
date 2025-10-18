@@ -1,3 +1,22 @@
-.info {
+@media (min-width: 1024px) {
+    .info {
+        padding-left: 64px;
+        padding-right: 64px;
 
+        &__title {
+            @include font(32);
+        }
+
+        &__text {
+            @include font(18);
+        }
+
+        @media (min-width: 1280px) {
+            &__container {
+                max-width: 750px;
+                display: grid;
+                align-self: end;
+            }
+        }
+    }
 }

@@ -1,6 +1,35 @@
 .encore {
+    @media (min-width: 1024px) {
+        padding-left: 64px;
+        padding-right: 64px;
+        gap: 32px;
+
+        &__title {
+            @include font(48);
+        }
+
+        &__wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        &__btn {
+            @include font(18);
+            max-width: 169px;
+        }
+    }
+
     &__img {
         width: 100%;
         height: auto;
+    }
+
+    &__text {
+        max-width: 640px;
+
+        @media (min-width: 1024px) {
+            @include font(18);
+        }
     }
 }

@@ -2,7 +2,7 @@
     background-image: url('../img/sections/main/section-hero/bg-hero.webp');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: top center;
     height: 666px;
 
     @media (min-width: 768px) {
@@ -20,7 +20,6 @@
         &__subtext {
             font-style: italic;
             font-weight: 500;
-            @include font(18);
         }
     }
 

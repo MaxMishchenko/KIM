@@ -1,4 +1,13 @@
 .footer {
+    @media (min-width: 1024px) {
+        padding-left: 64px;
+        padding-right: 64px;
+
+        &__nav {
+            flex-direction: row;
+        }
+    }
+
     &__form {
         @media (min-width: 768px) {
             flex-direction: row;

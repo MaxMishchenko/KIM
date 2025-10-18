@@ -11,6 +11,10 @@
             height: 100%;
             top: 0;
             z-index: 1;
+
+            @media (min-width: 1024px) {
+                width: 260px;
+            }
         }
 
         &:before {
@@ -30,9 +34,28 @@
 
     &__btn {
         max-width: 256px;
+
+        @media (min-width: 1024px) {
+            @include font(18);
+            max-width: 283px;
+            width: 100%;
+        }
     }
 
     &__text {
-        max-width: 691px;
+        max-width: 605px;
+
+        @media (min-width: 1024px) {
+            @include font(24);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        padding-left: 64px;
+        padding-right: 64px;
+
+        &__title {
+            @include font(48);
+        }
     }
 }

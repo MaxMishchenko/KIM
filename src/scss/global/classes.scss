@@ -387,6 +387,14 @@
                     background-color: var(--color--super-light-blue);
                 }
             }
+
+            &-dark-blue {
+                background: linear-gradient(90deg, var(--color--dark-blue-hover) 50%, var(--color--primary-btn-blue) 50%) 100% 0 / 200% no-repeat;
+
+                &:before {
+                    background-color: var(--color--dark-blue-hover);
+                }
+            }
         }
     }
 

@@ -6,6 +6,54 @@
 
     @media (min-width: 768px) {
         background-position: left;
+
+        &__wrapper {
+            flex-direction: row;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        padding-left: 64px;
+        padding-right: 64px;
+        gap: 32px;
+        flex-direction: row;
+        background-position: left bottom;
+
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__header {
+            gap: 32px;
+            flex-basis: 50%;
+        }
+
+        &__title {
+            @include font(48);
+
+            &-secondary {
+                @include font(24);
+            }
+        }
+
+        &__text {
+            @include font(18);
+            max-width: 640px;
+        }
+
+        &__subtitle {
+            @include font(32);
+        }
+
+        &__subtext {
+            @include font(18);
+        }
+    }
+
+    @media (min-width: 1280px) {
+        &__wrapper {
+            flex-direction: row;
+        }
     }
 
     &__container {
@@ -13,6 +61,10 @@
 
         @media (min-width: 768px) {
             padding: 32px;
+        }
+
+        @media (min-width: 1024px) {
+            flex-basis: 50%;
         }
     }
 
@@ -22,6 +74,20 @@
         @media (min-width: 768px) {
             flex-basis: calc(100% / 3);
             height: 139px;
+        }
+
+        @media (min-width: 1024px) {
+            &-title {
+                @include font(24);
+            }
+
+            &-text {
+                @include font(18);
+            }
+
+            &-subtext {
+                @include font(18);
+            }
         }
     }
 
@@ -33,11 +99,27 @@
                 flex-direction: row;
             }
         }
-    }
 
-    @media (min-width: 768px) {
-        &__wrapper {
-            flex-direction: row;
+        @media (min-width: 1024px) {
+            @include font(18);
+            max-width: 283px;
+            width: 100%;
+
+            &-secondary {
+                @include font(18);
+                max-width: 169px;
+                width: 100%;
+            }
+
+            &-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            &-container {
+                flex-direction: row;
+            }
         }
     }
 }

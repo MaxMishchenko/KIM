@@ -1,13 +1,34 @@
 .social {
+    @media (min-width: 1024px) {
+        padding-left: 64px;
+        padding-right: 64px;
+
+        &__title {
+            @include font(48);
+        }
+
+        &__subtitle {
+            @include font(18);
+        }
+    }
+
     &__img {
         object-fit: cover;
         width: 100%;
         height: auto;
+
+        @media (min-width: 1024px) {
+            max-height: 492px;
+        }
     }
 
     @media (min-width: 768px) {
         &__posts {
             flex-direction: row;
+
+            @media (min-width: 1024px) {
+                gap: 32px;
+            }
         }
 
         &__post {

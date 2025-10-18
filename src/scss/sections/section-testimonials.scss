@@ -1,4 +1,19 @@
 .testimonials {
+    @media (min-width: 1024px) {
+        padding-left: 64px;
+        padding-right: 64px;
+
+        &__title {
+            @include font(48);
+        }
+
+        &__header {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
     &__text {
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -11,7 +26,15 @@
 
             &-secondary {
                 display: flex !important;
+
+                @media (min-width: 1024px) {
+                    @include font(18);
+                }
             }
+        }
+
+        @media (min-width: 1024px) {
+            @include font(18);
         }
     }
 
@@ -28,6 +51,15 @@
             &-btn {
                 display: none;
             }
+        }
+
+        @media (min-width: 1024px) {
+            min-height: 926px;
+            height: 100%;
+        }
+
+        @media (min-width: 1280px) {
+            min-height: 726px;
         }
     }
 }
