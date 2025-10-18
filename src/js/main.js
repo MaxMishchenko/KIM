@@ -53,103 +53,6 @@ $(function () {
         $clone.remove();
         return h;
     }
-
-    $(document).on('click', '.btn--more-js', function (e) {
-        e.preventDefault();
-
-        const $btn = $(this);
-        const $parent = $btn.parent();
-        const $wrap = $parent.find('.more-wrap');
-        const $p = $wrap.find('p');
-        const $p1 = $p.eq(0);
-        const $p2 = $p.eq(1);
-        const isOpen = $btn.data('open') === true;
-
-        const collapsedH = $wrap.data('collapsedH') || $p1.outerHeight();
-        const h1Unclamped = measureUnclampedP1Height($p1);
-
-        let h2 = 0;
-        if ($p2.length) {
-            const wasHidden = $p2.is(':hidden');
-            if (wasHidden) $p2.show();
-            h2 = $p2.outerHeight();
-            if (wasHidden) $p2.hide();
-        }
-
-        const expandedH = h1Unclamped + h2;
-
-        if (!isOpen) {
-            $p1.css({
-                display: 'block',
-                overflow: 'visible',
-                '-webkit-box-orient': 'unset',
-                '-webkit-line-clamp': 'unset'
-            });
-            if ($p2.length) $p2.show();
-
-            $wrap
-                .stop(true, true)
-                .css('height', collapsedH)
-                .animate({ height: expandedH }, 300, function () {
-                    $(this).css('height', 'auto');
-                });
-
-            $btn.data('open', true).text('Hide').attr('aria-expanded', 'true');
-        } else {
-            const currentH = $wrap.outerHeight();
-
-            $wrap
-                .stop(true, true)
-                .css('height', currentH)
-                .animate({ height: collapsedH }, 300, function () {
-                    $p1.css({
-                        display: '-webkit-box',
-                        overflow: 'hidden',
-                        '-webkit-box-orient': 'vertical',
-                        '-webkit-line-clamp': '14'
-                    });
-                    if ($p2.length) $p2.hide();
-                    $(this).css('height', '');
-                });
-
-            $btn.data('open', false).text('More details').attr('aria-expanded', 'false');
-        }
-    });
-});
-
-// Autoclose button "More details" //
-$(function () {
-    const $sliderBtns = $('.swiper-button-prev, .swiper-button-next');
-    $sliderBtns.on('click', function () {
-        $('.btn--more-js[aria-expanded="true"]').trigger('click');
-    });
-});
-
-// Testimonials slider //
-const swiper = new Swiper('.swiper', {
-    direction: 'horizontal',
-    loop: true,
-    slidesPerView: 1,
-    allowTouchMove: true,
-    autoplay: false,
-    effect: 'slide',
-    spaceBetween: 32,
-    centeredSlides: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-    },
-    a11y: {
-        prevSlideMessage: 'Previous slide',
-        nextSlideMessage: 'Next slide'
-    },
-    breakpoints: {
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 32,
-            centeredSlides: false
-        }
-    }
 });
 
 // Main popup //
@@ -218,4 +121,132 @@ $(function () {
 $('#mobileMenuDropdownBtn').click(function () {
     $('#mobileMenuDropdownChevron').toggleClass('open');
     $('#mobileMenuDropdownList').slideToggle();
+});
+
+// Testimonials slider //
+$(function () {
+    const swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: true,
+        spaceBetween: 32,
+        centeredSlides: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        a11y: {
+            prevSlideMessage: 'Previous slide',
+            nextSlideMessage: 'Next slide'
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                centeredSlides: false
+            }
+        },
+        on: {
+            slideChangeTransitionStart() {
+                $('.btn--more-js[aria-expanded="true"]').each(function () {
+                    $(this).trigger('click');
+                });
+            }
+        }
+    });
+
+    $(document).on('click', '.btn--more-js', function (e) {
+        e.preventDefault();
+
+        const $btn = $(this);
+        const $parent = $btn.parent();
+        const $wrap = $parent.find('.more-wrap');
+        const $p1 = $wrap.find('p').eq(0);
+        const $p2 = $wrap.find('p').eq(1);
+        const isOpen = $btn.attr('data-open') === 'true';
+
+        if (!$wrap.data('collapsedH')) {
+            const wasAuto = $wrap.css('height') === 'auto';
+            if (wasAuto) $wrap.css('height', $wrap[0].scrollHeight);
+            const collapsedH = $wrap.outerHeight();
+            $wrap.data('collapsedH', collapsedH);
+            if (wasAuto) $wrap.css('height', '');
+        }
+
+        const collapsedH = $wrap.data('collapsedH');
+
+        $p1.css({
+            display: 'block',
+            overflow: 'visible',
+            '-webkit-box-orient': 'unset',
+            '-webkit-line-clamp': 'unset'
+        });
+        if ($p2.length) $p2.show();
+
+        const expandedH = $wrap[0].scrollHeight;
+
+        if (!isOpen) {
+            $wrap.stop(true, true)
+                .css('height', collapsedH)
+                .animate({ height: expandedH }, 300, function () {
+                    $(this).css('height', 'auto');
+                });
+
+            $btn.attr({
+                'data-open': 'true',
+                'aria-expanded': 'true'
+            }).text('Hide');
+        } else {
+            const currentH = $wrap.outerHeight();
+            $wrap.stop(true, true)
+                .css('height', currentH)
+                .animate({ height: collapsedH }, 300, function () {
+                    $p1.css({
+                        display: '-webkit-box',
+                        overflow: 'hidden',
+                        '-webkit-box-orient': 'vertical',
+                        '-webkit-line-clamp': '14'
+                    });
+                    if ($p2.length) $p2.hide();
+                    $(this).css('height', '');
+                });
+
+            $btn.attr({
+                'data-open': 'false',
+                'aria-expanded': 'false'
+            }).text('More details');
+        }
+    });
+});
+
+$(function () {
+    function toggleMoreButtons() {
+        $('.testimonials__slide').each(function () {
+            const $slide = $(this);
+            const $texts = $slide.find('.testimonials__text');
+            const $btn = $slide.find('.btn--more-js');
+
+            if ($texts.length === 1) {
+                const textHeight = $texts.eq(0).outerHeight();
+
+                if (textHeight < 336) {
+                    $btn.addClass('hidden');
+                } else {
+                    $btn.removeClass('hidden');
+                }
+            } else {
+                $btn.removeClass('hidden');
+            }
+        });
+    }
+
+    toggleMoreButtons();
+
+    let resizeTimer;
+    $(window).on('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(toggleMoreButtons, 150);
+    });
 });

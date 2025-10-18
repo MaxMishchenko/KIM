@@ -5,9 +5,29 @@
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 14;
         overflow: hidden;
+
+        @media (min-width: 768px) {
+            display: flex;
+
+            &-secondary {
+                display: flex !important;
+            }
+        }
     }
 
     &__wrapper {
         overflow-x: hidden;
+    }
+
+    &__slide {
+        min-height: 640px;
+
+        @media (min-width: 768px) {
+            min-height: 992px;
+
+            &-btn {
+                display: none;
+            }
+        }
     }
 }

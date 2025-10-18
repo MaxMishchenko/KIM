@@ -1,7 +1,45 @@
 .about {
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        padding-left: 64px;
+        padding-right: 64px;
+
+        &__title {
+            @include font(48);
+        }
+
+        &__text {
+            @include font(18);
+        }
+
+        &__container {
+            padding: 10px 0;
+        }
+
+        &__btn {
+            @include font(18);
+        }
+    }
+
+    @media (min-width: 1440px) {
+        &__wrapper {
+            height: 100%;
+            justify-content: space-between;
+        }
+    }
+
     &__img {
         width: calc(100vw - 64px);
         height: auto;
+
+        @media (min-width: 1024px) {
+            width: 40vw;
+            max-width: 640px;
+        }
+
+        @media (min-width: 1440px) {
+            width: auto;
+        }
     }
 
     @media (min-width: 768px) {

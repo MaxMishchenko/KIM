@@ -61,13 +61,11 @@
             flex-direction: row;
 
             &-field {
-                height: 59px;
                 width: 100%;
                 @include font(18);
             }
 
             &-btn {
-                height: 59px;
                 @include font(18);
                 flex-shrink: 0;
             }
