@@ -2,15 +2,46 @@
     @media (min-width: 1024px) {
         padding-left: 64px;
         padding-right: 64px;
+        gap: 32px;
 
         &__nav {
             flex-direction: row;
+            gap: normal;
+            width: 100%;
+            justify-content: space-evenly;
+
+            &-container {
+                flex-direction: row;
+                gap: normal;
+                width: 100%;
+            }
+
+            &-links {
+                display: none;
+            }
+        }
+
+        &__header {
+            &-links {
+                display: flex;
+            }
+        }
+
+        &__container {
+            flex-direction: row;
+            gap: normal;
         }
     }
 
     &__form {
         @media (min-width: 768px) {
             flex-direction: row;
+        }
+
+        @media (min-width: 1280px) {
+            &-container {
+                width: 517px;
+            }
         }
 
         &-field {

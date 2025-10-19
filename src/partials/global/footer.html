@@ -1,6 +1,6 @@
 <footer class="footer pt--32 pb--32 pl--32 pr--32 bg--dark-blue flex flex--column gap--24">
-    <div>
-        <div>
+    <div class="footer__container flex flex--column gap--24">
+        <div class="flex flex--column justify--between">
             <a href="/KIM/" class="flex">
                 <svg xmlns="http://www.w3.org/2000/svg" width="166" height="106" viewBox="0 0 166 106" fill="none">
                     <g clip-path="url(#clip0_2043_715)">
@@ -17,7 +17,7 @@
                 </svg>
             </a>
 
-            <nav class="hidden">
+            <nav class="footer__header-links hidden">
                 <ul class="flex flex--column gap--8">
                     <li>
                         <a href="#" class="flex font--normal font--primary font--16 color--decor-blue">Terms & Conditions</a>
@@ -30,7 +30,7 @@
             </nav>
         </div>
 
-        <div>
+        <div class="footer__nav-container flex flex--column gap--24">
             <nav class="footer__nav flex flex--column gap--32">
                 <div class="flex flex--column gap--16">
                     <h3 class="font--primary font--normal font--20 lh--150 color--white">Pages</h3>
@@ -85,16 +85,16 @@
                 </div>
             </nav>
 
-            <div>
-                <div class="flex flex--column">
+            <div class="flex flex--column gap--32">
+                <div class="footer__form-container flex flex--column gap--8">
                     <h3 class="font--primary font--normal font--20 lh--150 color--white">The Wellness Blueprint</h3>
 
-                    <p class="footer__text font--primary font--normal font--16 lh--150 color--white mb--16">Unlock the secrets to vibrant health with Dr. Kim’s expert insights on functional medicine, mold toxicity, and holistic well-being.</p>
+                    <p class="footer__text font--primary font--normal font--16 lh--150 color--white mb--8">Unlock the secrets to vibrant health with Dr. Kim’s expert insights on functional medicine, mold toxicity, and holistic well-being.</p>
 
-                    <form action="#" class="footer__form flex flex--column gap--8 mb--16">
-                        <input type="email" class="footer__form-field bg--white btn pt--16 pb--16 pl--16 pr--16 color--text-black font--normal font--primary font--16" placeholder="Email">
+                    <form action="#" class="footer__form flex flex--column gap--8">
+                        <input type="email" name="email" autocomplete="on" class="footer__form-field bg--white btn pt--16 pb--16 pl--16 pr--16 color--text-black font--normal font--primary font--16" placeholder="Email">
 
-                        <button type="submit" class="btn btn--secondary bg--btn-secondary color--white font--primary font--normal font--16 flex align--center justify--center">Sign Up</button>
+                        <button type="submit" class="btn btn--secondary bg--btn-secondary color--white font--primary font--normal font--16 flex flex--no-shrink align--center justify--center">Sign Up</button>
                     </form>
                 </div>
 
@@ -135,7 +135,7 @@
             </div>
         </div>
 
-        <nav>
+        <nav class="footer__nav-links">
             <ul class="flex flex--column gap--8">
                 <li>
                     <a href="#" class="flex font--normal font--primary font--16 color--decor-blue">Terms & Conditions</a>
