@@ -54,11 +54,15 @@
         }
 
         @media (min-width: 1024px) {
-            min-height: 926px;
+            min-height: 980px;
             height: 100%;
         }
 
         @media (min-width: 1280px) {
+            min-height: 791px;
+        }
+
+        @media (min-width: 1440px) {
             min-height: 726px;
         }
     }

@@ -390,6 +390,21 @@
                 &:before {
                     background-color: var(--color--super-light-blue);
                 }
+
+                &-header {
+                    background: linear-gradient(90deg, var(--color--super-light-blue) 50%, var(--color--dark-blue) 50%) 100% 0 / 200% no-repeat;
+
+                    &:before {
+                        background-color: var(--color--super-light-blue);
+                    }
+
+                    &:hover {
+                        * {
+                            color: var(--color--dark-blue);
+                            fill: var(--color--dark-blue);
+                        }
+                    }
+                }
             }
 
             &-dark-blue {
@@ -422,4 +437,49 @@
 
 .hidden {
     display: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1440px;
+}
+
+.full {
+    &--width {
+        width: 100%;
+    }
+
+    &--height {
+        height: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hover {
+        &--link {
+            width: fit-content;
+
+            &:after {
+                position: absolute;
+                content: '';
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 0;
+                height: 1px;
+                background-color: var(--color--white);
+                display: block;
+                transition: width .4s ease-in-out;
+            }
+
+            &:hover {
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }

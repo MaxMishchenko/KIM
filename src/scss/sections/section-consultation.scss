@@ -2,7 +2,7 @@
     background-image: url('../img/sections/main/section-consultation/bg-line.svg');
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: center bottom;
+    background-position: left bottom;
 
     @media (min-width: 768px) {
         background-position: left;
@@ -18,6 +18,10 @@
         gap: 32px;
         flex-direction: row;
         background-position: left bottom;
+
+        &__content {
+            flex-direction: row;
+        }
 
         &__wrapper {
             flex-direction: column;
@@ -64,6 +68,10 @@
         }
 
         @media (min-width: 1024px) {
+            flex-basis: calc(50% + 42px);
+        }
+
+        @media (min-width: 1440px) {
             flex-basis: 50%;
         }
     }

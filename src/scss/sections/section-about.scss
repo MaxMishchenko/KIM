@@ -1,8 +1,11 @@
 .about {
     @media (min-width: 1024px) {
-        flex-direction: row;
         padding-left: 64px;
         padding-right: 64px;
+
+        &__block {
+            flex-direction: row;
+        }
 
         &__title {
             @include font(48);

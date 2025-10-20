@@ -19,6 +19,14 @@
             &-links {
                 display: none;
             }
+
+            &-link {
+                transition: .4s ease;
+
+                &:hover {
+                    color: var(--color--blue-hover);
+                }
+            }
         }
 
         &__header {
