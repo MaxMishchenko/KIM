@@ -42,11 +42,9 @@
     }
 
     &__form {
-        @media (min-width: 768px) {
-            flex-direction: row;
-        }
-
         @media (min-width: 1280px) {
+            flex-direction: row;
+
             &-container {
                 width: 517px;
             }

@@ -73,10 +73,11 @@
     }
 
     &__text {
-        max-width: 462px;
+        max-width: 443px;
 
         @media (min-width: 1024px) {
             @include font(24);
+            max-width: 628px;
         }
     }
 
