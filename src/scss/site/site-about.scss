@@ -1,0 +1,22 @@
+@import '../global/nullstyle';
+@import '../global/fonts';
+@import '../global/variables';
+@import '../global/classes';
+@import '../global/colors';
+@import '../global/global';
+@import '../global/animations';
+
+// BASE
+@import '../base/header';
+@import '../base/footer';
+@import '../base/breadcrumbs';
+
+// SECTIONS
+@import '../pages/about/sections/section-hero';
+@import '../pages/about/sections/section-story';
+@import '../pages/about/sections/section-bio';
+@import '../pages/about/sections/section-health';
+
+// MENU
+@import '../menu/mobile-menu';
+@import '../menu/desktop-menu';

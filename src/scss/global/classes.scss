@@ -160,6 +160,10 @@
         &--16 {
             margin-bottom: 16px;
         }
+
+        &--24 {
+            margin-bottom: 24px;
+        }
     }
 
     &r {
@@ -216,6 +220,10 @@
         background-color: var(--color--deco-blue);
     }
 
+    &--light-deco-blue {
+        background-color: var(--color--light-deco-blue);
+    }
+
     &--btn-secondary {
         background-color: var(--color--btn-secondary);
     }
@@ -270,6 +278,10 @@
 
     &--secondary {
         font-family: 'Sansation', sans-serif;
+    }
+
+    &--italic {
+        font-style: italic;
     }
 
     &--16 {

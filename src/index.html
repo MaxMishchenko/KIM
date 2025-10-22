@@ -1,27 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
-    @include('partials/global/head.html')
+    @include('partials/meta/main/head.html')
 
     <link rel="preload" as="image" aria-hidden="true" href="./img/sections/main/section-hero/bg-hero.webp">
 </head>
 <title>KIM Wellness Wholistic In You</title>
 <body class="flex flex--column">
-@include('partials/global/sprite.html')
+@include('partials/site/pages/main/sprite/sprite.html')
 @include('partials/global/header.html')
 
 <main>
-    @include('partials/main/sections/section-hero.html')
-    @include('partials/main/sections/section-about.html')
-    @include('partials/main/sections/section-store.html')
-    @include('partials/main/sections/section-encore.html')
-    @include('partials/main/sections/section-consultation.html')
-    @include('partials/main/sections/section-info.html')
-    @include('partials/main/sections/section-insights.html')
-    @include('partials/main/sections/section-testimonials.html')
-    @include('partials/main/sections/section-social.html')
+    @include('partials/site/pages/main/sections/section-hero.html')
+    @include('partials/site/pages/main/sections/section-about.html')
+    @include('partials/site/pages/main/sections/section-store.html')
+    @include('partials/site/pages/main/sections/section-encore.html')
+    @include('partials/site/pages/main/sections/section-consultation.html')
+    @include('partials/site/pages/main/sections/section-info.html')
+    @include('partials/site/pages/main/sections/section-insights.html')
+    @include('partials/site/pages/main/sections/section-testimonials.html')
+    @include('partials/site/pages/main/sections/section-social.html')
 
-    @include('partials/main/popup/main-popup.html')
+    @include('partials/site/pages/main/popup/main-popup.html')
 </main>
 
 @include('partials/global/footer.html')
@@ -29,6 +29,7 @@
 <script defer src="./js/jquery.js"></script>
 <script defer src="./js/swiper-bundle.min.js"></script>
 <script defer src="./js/main.js?v=2.2"></script>
+<script defer src="./js/global.js?v=2.2"></script>
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",

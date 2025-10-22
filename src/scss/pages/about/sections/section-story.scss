@@ -1,0 +1,21 @@
+.story {
+    @media (min-width: 1024px) {
+        padding-left: 64px;
+        padding-right: 64px;
+
+        &__title {
+            @include font(32);
+        }
+    }
+
+    &__text {
+        max-width: 630px;
+
+        @media (min-width: 1024px) {
+            @include font(18);
+            max-width: 700px;
+            display: grid;
+            align-self: flex-end;
+        }
+    }
+}

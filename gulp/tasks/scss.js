@@ -4,7 +4,7 @@ const buildPath = path.join(packageJson.buildPath, 'css');
 
 module.exports = function () {
     $.gulp.task('scss', function () {
-        return $.gulp.src('src/scss/main.scss')
+        return $.gulp.src(['src/scss/site/*.scss', 'src/scss/admin/*.scss'])
             .pipe($.gp.sassGlob())
             .pipe($.gp.sass())
             .on('error', $.gp.notify.onError({

@@ -1,0 +1,74 @@
+.bio {
+    @media (min-width: 768px) {
+        &__text {
+            max-width: 620px;
+
+            @media (min-width: 1024px) {
+                @include font(18);
+                max-width: 597px;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        padding-left: 64px;
+        padding-right: 64px;
+
+        &__container {
+            flex-direction: row;
+            gap: 32px;
+        }
+
+        &__title {
+            @include font(32);
+        }
+    }
+
+    &__list {
+        &-item {
+            @media (min-width: 1024px) {
+                @include font(18);
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: block;
+                width: 24px;
+                height: 24px;
+                background-color: var(--color--green);
+                border-radius: 50%;
+                background-image: url('../img/sections/about/section-bio/icon-check.svg');
+                background-repeat: no-repeat;
+                background-size: 12px 12px;
+                background-position: center;
+            }
+        }
+    }
+
+    &__blockquote {
+        border-left: 2px solid var(--color--dark-blue);
+
+        @media (min-width: 1024px) {
+            @include font(18);
+            max-width: 622px;
+            margin-top: 16px;
+        }
+    }
+
+    &__img {
+        width: calc(100vw - 64px);
+        height: auto;
+
+        @media (min-width: 1024px) {
+            width: 40vw;
+            max-width: 641px;
+        }
+
+        @media (min-width: 1440px) {
+            width: auto;
+        }
+    }
+}

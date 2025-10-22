@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    @include('partials/meta/about/head.html')
+
+    <link rel="preload" as="image" aria-hidden="true" href="./img/sections/about/section-hero/image-john-kim-small.webp">
+</head>
+<title>KIM Wellness Wholistic In You - About Me</title>
+<body class="flex flex--column">
+@include('partials/global/header.html')
+
+<main>
+    @include('partials/breadcrumbs/breadcrumbs.html')
+    @include('partials/site/pages/about/sections/section-hero.html')
+    @include('partials/site/pages/about/sections/section-story.html')
+    @include('partials/site/pages/about/sections/section-bio.html')
+    <!--@include('partials/site/pages/about/sections/section-health.html')-->
+</main>
+
+@include('partials/global/footer.html')
+
+<script defer src="./js/jquery.js"></script>
+<script defer src="./js/global.js?v=2.2"></script>
+</body>
+</html>

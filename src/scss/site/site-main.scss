@@ -1,0 +1,29 @@
+@import '../global/nullstyle';
+@import '../global/fonts';
+@import '../global/variables';
+@import '../global/classes';
+@import '../global/colors';
+@import '../global/global';
+@import '../global/animations';
+
+// BASE
+@import '../base/header';
+@import '../base/footer';
+
+// SECTIONS
+@import '../pages/main/sections/section-hero';
+@import '../pages/main/sections/section-about';
+@import '../pages/main/sections/section-store';
+@import '../pages/main/sections/section-encore';
+@import '../pages/main/sections/section-consultation';
+@import '../pages/main/sections/section-info';
+@import '../pages/main/sections/section-insights';
+@import '../pages/main/sections/section-testimonials';
+@import '../pages/main/sections/section-social';
+
+// POPUP
+@import '../popup/main-popup';
+
+// MENU
+@import '../menu/mobile-menu';
+@import '../menu/desktop-menu';
