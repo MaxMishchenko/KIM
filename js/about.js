@@ -1,0 +1,1 @@
+$(function(){$(".health__video-wrapper").on("click",".health__video-play",function(){const e=$(this).closest(".health__video-wrapper"),i=e.find(".health__video-element")[0];e.find(".health__video-preview").fadeOut(300),$(i).fadeIn(300),i.play()})});

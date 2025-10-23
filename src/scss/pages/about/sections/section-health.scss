@@ -1,6 +1,133 @@
 .health {
-    &__video-wrap {
-        aspect-ratio: 16 / 9;
-        overflow: hidden;
+    @media (min-width: 768px) {
+       &__text {
+           max-width: 660px;
+
+           @media (min-width: 1024px) {
+               @include font(18);
+           }
+
+           @media (min-width: 1280px) {
+               max-width: 600px;
+
+               &:nth-of-type(2) {
+                   margin-bottom: 16px;
+               }
+           }
+       }
+    }
+
+    @media (min-width: 1024px) {
+        padding-left: 64px;
+        padding-right: 64px;
+
+        &__title {
+            @include font(34);
+        }
+    }
+
+    @media (min-width: 1280px) {
+        &__container {
+            flex-direction: row;
+            gap: 32px;
+        }
+    }
+
+    &__video {
+        &-wrapper {
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+
+            @media (min-width: 768px) {
+                margin-bottom: 16px;
+            }
+
+            @media (min-width: 1024px) {
+                margin-bottom: 0;
+            }
+
+            @media (min-width: 1280px) {
+                max-width: 640px;
+                background-color: #000000;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        &-preview {
+            inset: 0;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('../img/sections/about/section-health/video-preview.webp');
+
+            @media (min-width: 1024px) {
+                cursor: pointer;
+            }
+
+            @media (min-width: 1280px) {
+                background-size: cover;
+            }
+        }
+
+        &-play {
+            inset: 0;
+            width: 89.5px;
+            height: 89.5px;
+            margin: auto;
+            border: none;
+            background-color: var(--color--white);
+            border-radius: 50%;
+
+            @media (min-width: 1024px) {
+                cursor: pointer;
+            }
+
+            @media (min-width: 1280px) {
+                width: 115px;
+                height: 115px;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translate(-40%, -50%);
+                width: 0; height: 0;
+                border-left: 32px solid var(--color--text-black);
+                border-top: 18px solid transparent;
+                border-bottom: 18px solid transparent;
+
+                @media (min-width: 1280px) {
+                    border-left: 42px solid var(--color--text-black);
+                    border-top: 24px solid transparent;
+                    border-bottom: 24px solid transparent;
+                }
+            }
+        }
+
+        &-element {
+            border: none;
+        }
+    }
+
+    &__list {
+        @media (min-width: 768px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 560px;
+        }
+
+        @media (min-width: 1280px) {
+            max-width: 1041px;
+        }
+
+        &-item {
+            width: fit-content;
+
+            @media (min-width: 1024px) {
+                @include font(18);
+            }
+        }
     }
 }

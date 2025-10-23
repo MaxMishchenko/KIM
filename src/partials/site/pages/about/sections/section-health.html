@@ -2,29 +2,35 @@
     <div class="container full--width full--height m--auto flex flex--column gap--24">
         <h2 class="health__title font--normal font--secondary font--24 lh--105 color--dark-blue">Health Crisis</h2>
 
-        <div>
-            <div class="health__video-wrap">
-                <iframe src="https://www.youtube.com/embed/ID_ВІДЕО" title="Video" allowfullscreen></iframe>
+        <div class="health__container flex flex--column gap--24">
+            <div class="health__video-wrapper position--relative full--width m--auto">
+                <div class="health__video-preview position--absolute">
+                    <button class="health__video-play position--absolute" aria-label="Play video"></button>
+                </div>
+
+                <video class="health__video-element full--width hidden" preload="none" controls>
+                    <source src="./img/sections/about/section-health/video.mp4" type="video/mp4">
+                </video>
             </div>
 
             <div class="flex flex--column gap--16">
-                <p>In June 2015, at age 33, I had a heart attack ( NSTEMI) and received a stent. Despite exercising and eating “clean,” I missed the bigger picture. Three weeks into recovery, an integrative physician colleague suspected deeper issues. Testing revealed:</p>
+                <p class="health__text font--primary font--normal font--16 color--text-black lh--150">In June 2015, at age 33, I had a heart attack (NSTEMI) and received a stent. Despite exercising and eating “clean,” I missed the bigger picture. Three weeks into recovery, an integrative physician colleague suspected deeper issues. Testing revealed:</p>
 
-                <ul class="flex flex--column gap--8">
-                    <li class="bg--deco-blue">Bartonella</li>
+                <ul class="health__list flex flex--column gap--8">
+                    <li class="health__list-item bg--deco-blue font--primary font--normal font--16 color--text-black lh--150 pl--24 pr--24 pt--8 pb--8">Bartonella</li>
 
-                    <li class="bg--deco-blue">Mold toxicity</li>
+                    <li class="health__list-item bg--deco-blue font--primary font--normal font--16 color--text-black lh--150 pl--24 pr--24 pt--8 pb--8">Mold toxicity</li>
 
-                    <li class="bg--deco-blue">Mycoplasma pneumoniae</li>
+                    <li class="health__list-item bg--deco-blue font--primary font--normal font--16 color--text-black lh--150 pl--24 pr--24 pt--8 pb--8">Mycoplasma pneumoniae</li>
 
-                    <li class="bg--deco-blue">Epstein–Barr virus</li>
+                    <li class="health__list-item bg--deco-blue font--primary font--normal font--16 color--text-black lh--150 pl--24 pr--24 pt--8 pb--8">Epstein–Barr virus</li>
 
-                    <li class="bg--deco-blue">Parasites</li>
+                    <li class="health__list-item bg--deco-blue font--primary font--normal font--16 color--text-black lh--150 pl--24 pr--24 pt--8 pb--8">Parasites</li>
 
-                    <li class="bg--deco-blue">Heavy metals</li>
+                    <li class="health__list-item bg--deco-blue font--primary font--normal font--16 color--text-black lh--150 pl--24 pr--24 pt--8 pb--8">Heavy metals</li>
                 </ul>
 
-                <p>Recovery was difficult. I experienced intense Herxheimer reactions (die off) and significant financial strain. In that season, I believe God met me and helped me connect key patterns: mitochondrial dysfunction, microbiome imbalance, environmental toxicity, and nervous system dysregulation. My body wasn’t failing—it was crying for help. Improvement came from restoring balance, not adding more pills. It was neither quick nor easy—but it worked.</p>
+                <p class="health__text font--primary font--normal font--16 color--text-black lh--150">Recovery was difficult. I experienced intense Herxheimer reactions (die off) and significant financial strain. In that season, I believe God met me and helped me connect key patterns: mitochondrial dysfunction, microbiome imbalance, environmental toxicity, and nervous system dysregulation. My body wasn’t failing—it was crying for help. Improvement came from restoring balance, not adding more pills. It was neither quick nor easy—but it worked.</p>
             </div>
         </div>
     </div>
