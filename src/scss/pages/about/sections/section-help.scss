@@ -1,0 +1,66 @@
+.help {
+    @media (min-width: 768px) {
+        background-image: url('../img/sections/about/section-help/bg-line.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left center;
+
+        &__text {
+            padding-right: 105px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        padding-left: 64px;
+        padding-right: 64px;
+
+        &__title {
+            @include font(32);
+        }
+
+        &__text {
+            @include font(18);
+            padding-right: 0;
+        }
+
+        &__wrapper {
+            max-width: 595px;
+            display: grid;
+            align-self: flex-end;
+        }
+    }
+
+    &__btn {
+        max-width: 256px;
+
+        @media (min-width: 1024px) {
+            @include font(18);
+            max-width: 283px;
+            width: 100%;
+        }
+    }
+
+    &__list {
+        &-item {
+            @media (min-width: 1024px) {
+                @include font(18);
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: block;
+                width: 24px;
+                height: 24px;
+                background-color: var(--color--green);
+                border-radius: 50%;
+                background-image: url('../img/sections/about/section-bio/icon-check.svg');
+                background-repeat: no-repeat;
+                background-size: 12px 12px;
+                background-position: center;
+            }
+        }
+    }
+}

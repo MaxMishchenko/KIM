@@ -1,11 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    @include('partials/meta/main/head.html')
+    @include('partials/meta/head.html')
+
+    <link rel="preload" href="./css/site-main.css?v=2.2" as="style">
+    <link href="./css/site-main.css?v=2.2" rel="stylesheet">
 
     <link rel="preload" as="image" aria-hidden="true" href="./img/sections/main/section-hero/bg-hero.webp">
 </head>
-<title>KIM Wellness Wholistic In You</title>
+<title>John Kim</title>
 <body class="flex flex--column">
 @include('partials/site/pages/main/sprite/sprite.html')
 @include('partials/global/header.html')
@@ -36,26 +39,26 @@
         "@graph": [
             {
                 "@type": "WebSite",
-                "@id": "https://maxmishchenko.github.io/KIM/",
-                "url": "https://maxmishchenko.github.io/KIM/",
-                "name": "KIM Wellness Wholistic In You",
+                "@id": "https://www.kimwellness.co/",
+                "url": "https://www.kimwellness.co/",
+                "name": "John Kim",
                 "potentialAction": {
                     "@type": "SearchAction",
-                    "target": "https://maxmishchenko.github.io/KIM/?q={search_term_string}",
+                    "target": "https://www.kimwellness.co/?q={search_term_string}",
                     "query-input": "required name=search_term_string"
                 }
             },
             {
                 "@type": "WebPage",
-                "@id": "https://maxmishchenko.github.io/KIM/",
-                "url": "https://maxmishchenko.github.io/KIM/",
-                "name": "KIM Wellness Wholistic In You",
+                "@id": "https://www.kimwellness.co/",
+                "url": "https://www.kimwellness.co/",
+                "name": "John Kim",
                 "isPartOf": {
-                    "@id": "https://maxmishchenko.github.io/KIM/"
+                    "@id": "https://www.kimwellness.co/"
                 },
                 "image": {
                     "@type": "ImageObject",
-                    "url": "https://maxmishchenko.github.io/KIM/img/og/og_vibefit_1200_675.png",
+                    "url": "https://www.kimwellness.co/img/og/john-kim-1200-675.jpg",
                     "width": 1200,
                     "height": 675
                 }

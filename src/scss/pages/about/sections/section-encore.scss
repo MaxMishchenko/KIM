@@ -1,0 +1,57 @@
+.encore {
+    @media (min-width: 768px) {
+        &__container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 24px;
+
+            @media (min-width: 1024px) {
+                gap: 32px;
+            }
+        }
+
+        &__text {
+            max-width: 655px;
+
+            @media (min-width: 1024px) {
+                @include font(18);
+                max-width: 621px;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        padding-left: 64px;
+        padding-right: 64px;
+
+        &__title {
+            @include font(32);
+        }
+    }
+
+    &__card {
+        min-height: 290px;
+        padding: 24px;
+
+        @media (min-width: 768px) {
+            flex-basis: calc(50% - 12px);
+        }
+
+        @media (min-width: 1024px) {
+            flex-basis: calc((100% / 3) - 22px);
+
+            &-text {
+                @include font(18);
+            }
+        }
+
+        &-letter {
+            width: 80px;
+            height: 80px;
+
+            @media (min-width: 1024px) {
+                @include font(24);
+            }
+        }
+    }
+}

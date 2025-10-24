@@ -1,0 +1,31 @@
+.education {
+    &__list {
+        &-item {
+            list-style: disc;
+        }
+    }
+
+    &__img {
+        width: calc(100vw - 64px);
+        height: auto;
+
+        @media (min-width: 1024px) {
+            width: 40vw;
+            max-width: 640px;
+        }
+
+        @media (min-width: 1440px) {
+            width: auto;
+        }
+    }
+
+    &__blockquote {
+        border-left: 2px solid var(--color--dark-blue);
+
+        @media (min-width: 1024px) {
+            @include font(18);
+            max-width: 622px;
+            margin-top: 16px;
+        }
+    }
+}

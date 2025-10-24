@@ -1,11 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    @include('partials/meta/about/head.html')
+    @include('partials/meta/head.html')
+
+    <link rel="preload" href="./css/site-about.css?v=2.2" as="style">
+    <link href="./css/site-about.css?v=2.2" rel="stylesheet">
 
     <link rel="preload" as="image" aria-hidden="true" href="./img/sections/about/section-hero/image-john-kim-small.webp">
 </head>
-<title>KIM Wellness Wholistic In You - About Me</title>
+<title>John Kim - About Me</title>
 <body class="flex flex--column">
 @include('partials/global/header.html')
 
@@ -15,6 +18,9 @@
     @include('partials/site/pages/about/sections/section-story.html')
     @include('partials/site/pages/about/sections/section-bio.html')
     @include('partials/site/pages/about/sections/section-health.html')
+    @include('partials/site/pages/about/sections/section-encore.html')
+    @include('partials/site/pages/about/sections/section-help.html')
+    @include('partials/site/pages/about/sections/section-education.html')
 </main>
 
 @include('partials/global/footer.html')
