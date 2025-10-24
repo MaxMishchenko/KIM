@@ -71,4 +71,14 @@
             width: auto;
         }
     }
+
+    &__btn {
+        max-width: 256px;
+
+        @media (min-width: 1024px) {
+            @include font(18);
+            max-width: 283px;
+            width: 100%;
+        }
+    }
 }
